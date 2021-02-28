@@ -1,0 +1,49 @@
+:root {
+  --numCols: 1;
+  --numRows: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+#main {
+  display: flex
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(var(--numCols), 1fr);
+  grid-template-rows: repeat(var(--numRows), 1fr);
+  height: 720px;
+  width: 720px;
+  margin: auto;
+}
+
+.cell {
+  display: flex;
+  padding: 3px;
+  background-color: rgb(212, 211, 211);
+  border: 1px solid black;
+}
+
+#buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+@media (max-width: 586px) {
+  #container {
+    height: 300px;
+    overflow-x: hidden;
+  }
+} 
