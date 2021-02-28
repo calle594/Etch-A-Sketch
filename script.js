@@ -22,6 +22,7 @@ function makeRows(numRow, numCol) {
   }
 }
 
+//prompt user for grid size.
 function askUser() {
   let newSize = prompt("Enter grid size");
   if (newSize > 67 || Number.isNaN(newSize)) {
@@ -34,6 +35,7 @@ function askUser() {
   }
 }
 
+//change colour of divs on hover
 function changeColor(e) {
   let x = Math.floor(Math.random() * 256);
   let y = Math.floor(Math.random() * 256);
@@ -41,6 +43,7 @@ function changeColor(e) {
   e.target.style.backgroundColor = `rgb(${x}, ${y}, ${z})`;
 }
 
+//clear the grid when user changes grid size
 function resetGrid() {
   const gridArray = Array.from(container.childNodes);
   gridArray.forEach((x) => {
